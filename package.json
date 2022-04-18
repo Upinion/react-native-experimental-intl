@@ -74,7 +74,7 @@
   "directories": {},
   "gitHead": "126a7c966bf5231cc1bbdad44af4ec22d6eda4e2",
   "homepage": "https://github.com/yahoo/react-intl",
-  "jsnext:main": "./lib/index.es.js",
+  "jsnext:main": "./src/index.js",
   "keywords": [
     "intl",
     "i18n",
@@ -90,7 +90,7 @@
     "translation"
   ],
   "license": "BSD-3-Clause",
-  "main": "./lib/index.js",
+  "main": "./src/index.js",
   "maintainers": [
     {
       "name": "juldiadia",
@@ -108,7 +108,7 @@
     "url": "git+ssh://git@github.com/yahoo/react-intl.git"
   },
   "scripts": {
-    "clean": "rimraf src/en.js coverage/ dist/ lib/ locale-data/",
+    "clean": "rimraf src/en.js coverage/ locale-data/",
     "lint": "eslint .",
     "postversion": "echo 'Uninstall react-router to fix npm issue' && npm uninstall react-router",
     "prepublish": "npm run clean",
