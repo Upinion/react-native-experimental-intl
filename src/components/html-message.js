@@ -3,8 +3,8 @@
  * Copyrights licensed under the New BSD License.
  * See the accompanying LICENSE file for terms.
  */
-
-import {Component, PropTypes, createElement} from 'react';
+import PropTypes from 'prop-types';
+import {Component, createElement} from 'react';
 import {intlShape, messageDescriptorPropTypes} from '../types';
 import {
     invariantIntlContext,
