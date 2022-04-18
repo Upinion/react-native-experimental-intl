@@ -95,7 +95,7 @@ export default class FormattedRelative extends Component {
         return shouldIntlComponentUpdate(this, ...next);
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    UNSAFE_componentWillUpdate(nextProps, nextState) {
         this.scheduleNextUpdate(nextProps, nextState);
     }
 
@@ -143,6 +143,7 @@ FormattedRelative.propTypes = {
     tagName: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.func,
+        PropTypes.elementType
     ]),
     tagProps: PropTypes.object,
     children      : PropTypes.func,

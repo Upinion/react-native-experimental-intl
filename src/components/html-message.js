@@ -81,7 +81,7 @@ FormattedHTMLMessage.contextTypes = {
 FormattedHTMLMessage.propTypes = {
     ...messageDescriptorPropTypes,
     values  : PropTypes.object,
-    tagName : PropTypes.string,
+    tagName : PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
     children: PropTypes.func,
 };
 

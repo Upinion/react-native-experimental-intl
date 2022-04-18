@@ -3413,7 +3413,7 @@ var format = Object.freeze({
   FormattedDate.propTypes = babelHelpers['extends']({}, dateTimeFormatPropTypes, {
       children: React.PropTypes.func,
       format: React.PropTypes.string,
-      tagName: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.func]),
+      tagName: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.func, React.PropTypes.elementType]),
       tagProps: React.PropTypes.object,
       value: React.PropTypes.any.isRequired
   });
@@ -3475,7 +3475,7 @@ var format = Object.freeze({
 
   FormattedTime.propTypes = babelHelpers['extends']({}, dateTimeFormatPropTypes, {
       value: React.PropTypes.any.isRequired,
-      tagName: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.func]),
+      tagName: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.func, React.PropTypes.elementType]),
       tagProps: React.PropTypes.object,
       format: React.PropTypes.string,
       children: React.PropTypes.func
@@ -3591,8 +3591,8 @@ var format = Object.freeze({
               return shouldIntlComponentUpdate.apply(undefined, [this].concat(next));
           }
       }, {
-          key: 'componentWillUpdate',
-          value: function componentWillUpdate(nextProps, nextState) {
+          key: 'UNSAFE_componentWillUpdate',
+          value: function UNSAFE_componentWillUpdate(nextProps, nextState) {
               this.scheduleNextUpdate(nextProps, nextState);
           }
       }, {
@@ -3639,7 +3639,7 @@ var format = Object.freeze({
       format: React.PropTypes.string,
       updateInterval: React.PropTypes.number,
       initialNow: React.PropTypes.any,
-      tagName: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.func]),
+      tagName: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.func, React.PropTypes.elementType]),
       tagProps: React.PropTypes.object,
       children: React.PropTypes.func
   });
@@ -3703,7 +3703,7 @@ var format = Object.freeze({
   FormattedNumber.propTypes = babelHelpers['extends']({}, numberFormatPropTypes, {
       value: React.PropTypes.any.isRequired,
       format: React.PropTypes.string,
-      tagName: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.func]),
+      tagName: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.func, React.PropTypes.elementType]),
       tagProps: React.PropTypes.object,
       children: React.PropTypes.func
   });
@@ -3775,7 +3775,7 @@ var format = Object.freeze({
       few: React.PropTypes.node,
       many: React.PropTypes.node,
 
-      tagName: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.func]),
+      tagName: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.func, React.PropTypes.elementType]),
       tagProps: React.PropTypes.object,
 
       children: React.PropTypes.func
@@ -3919,7 +3919,7 @@ var format = Object.freeze({
 
   FormattedMessage.propTypes = babelHelpers['extends']({}, messageDescriptorPropTypes, {
       values: React.PropTypes.object,
-      tagName: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.func]),
+      tagName: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.func, React.PropTypes.elementType]),
       tagProps: React.PropTypes.object,
       children: React.PropTypes.func
   });

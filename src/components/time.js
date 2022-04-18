@@ -48,6 +48,7 @@ FormattedTime.propTypes = {
     tagName: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.func,
+        PropTypes.elementType
     ]),
     tagProps: PropTypes.object,
     format  : PropTypes.string,

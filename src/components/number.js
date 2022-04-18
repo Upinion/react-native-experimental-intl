@@ -50,6 +50,7 @@ FormattedNumber.propTypes = {
     tagName: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.func,
+        PropTypes.elementType
     ]),
     tagProps: PropTypes.object,
     children: PropTypes.func,
